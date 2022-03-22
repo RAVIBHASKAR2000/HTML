@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Make site responsive on mobile/tablet -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Art Gallery</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+      <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+  <style type="text/css">
+    .copyr
+    {
+      color: white;
+      text-shadow: 0px 4px 8px red,
+      0px 8px 15px yellow;
+    }
+  </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/art">Freedom Art</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+       <li class="nav-item">
+        <a class="nav-link" href="/about" tabindex="-1" aria-disabled="true">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact" tabindex="-1" aria-disabled="true">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/developer" tabindex="-1" aria-disabled="true">Developer</a>
+      </li>
+  </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      <li><a class="nav-link" href="/art/new">Upload</a></li>
+        <li><a class="nav-link" href="/art/show">Creations</a></li>
+      <li><a class="nav-link">Signed In As 4ni18is069</a></li>
+        <li><a class="nav-link" href="/logout">Logout <i class="fas fa-sign-out-alt"></i></a></li>
+      
+  </ul>
+  </div>
+</nav><br>
+  
+  
+  <div class="alert alert-success" role="alert">
+    Successfully Uploaded Your Art!!
+  </div>
+  
+
+<style>
+body
+{
+width:100%;
+height:200vh;
+    background:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1440&q=80');
+    background-size:cover;
+    background-position:center;
+}
+h1
+{
+	text-align:center;
+	color:orange;
+	text-shadow:0px 4px 8px blue,
+	0px 8px 15px yellow;
+}
+hr
+{
+	border:2px solid blue;
+	text-shadow:0px 4px 8px red;
+}
+.box
+{
+    width:400px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+    margin-right:50px;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow:0 4px 10px red;
+  }
+    .card:before,
+  .card:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #fff;
+    transition: 0.5s;
+    z-index:-1;
+  }
+  .card:hover:before{
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card:hover:after{
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+  }
+  
+  .card:hover .imgBx
+  {
+    bottom: 80px;
+  }
+
+  .card .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .card .details{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 60px;
+      text-align: center;
+  }
+
+  .card .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 20px;
+   color: #777;
+   text-transform: uppercase;
+  } 
+
+  .card .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color: #f38695;
+  display: block;
+  margin-top: 5px;
+   } 
+</style>
+<div class="container">
+<h1><em><strong>Beautiful Arts</strong></em></h1>
+<p>(Click On the Images to Get the Full Datail and to Leave Your Reviews)</p>
+<hr>
+<br>
+<div class="row text-center" style:"display:flex; flex-wrap: wrap;" id="art-grid">
+
+ <div class="col-lg-4 col-md-8 col-sm-7">
+ <div class="box">
+                <div class="card">    
+                <div class="imgBx">
+                <img src= "https://res.cloudinary.com/djsshanet/image/upload/v1590650882/dqiycjszxhvgbe1iotno.jpg ">
+                </div>
+                <div class="details">
+    <h2>Dharchula</h2>
+    <p><em>Submitted by ashok8260</em>
+    <a href="/art/show/5ecf6803baf28100179c6c3f" class="btn btn-primary">More-Info</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+
+ <div class="col-lg-4 col-md-8 col-sm-7">
+ <div class="box">
+                <div class="card">    
+                <div class="imgBx">
+                <img src= "https://res.cloudinary.com/djsshanet/image/upload/v1590729248/ztwmzzff4irfucadkqth.jpg ">
+                </div>
+                <div class="details">
+    <h2>wonderWoman</h2>
+    <p><em>Submitted by siddhant</em>
+    <a href="/art/show/5ed09a20e4754300177168d6" class="btn btn-primary">More-Info</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+
+ <div class="col-lg-4 col-md-8 col-sm-7">
+ <div class="box">
+                <div class="card">    
+                <div class="imgBx">
+                <img src= "https://res.cloudinary.com/djsshanet/image/upload/v1590729298/f4j1df3283sm5o6pk1zv.jpg ">
+                </div>
+                <div class="details">
+    <h2>The Ancient One</h2>
+    <p><em>Submitted by siddhant</em>
+    <a href="/art/show/5ed09a52e4754300177168d8" class="btn btn-primary">More-Info</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+
+ <div class="col-lg-4 col-md-8 col-sm-7">
+ <div class="box">
+                <div class="card">    
+                <div class="imgBx">
+                <img src= "https://res.cloudinary.com/djsshanet/image/upload/v1590729368/x2ln8qz2j5jwiacckv3h.png ">
+                </div>
+                <div class="details">
+    <h2>Dinos!</h2>
+    <p><em>Submitted by siddhant</em>
+    <a href="/art/show/5ed09a99e4754300177168d9" class="btn btn-primary">More-Info</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+
+ <div class="col-lg-4 col-md-8 col-sm-7">
+ <div class="box">
+                <div class="card">    
+                <div class="imgBx">
+                <img src= "https://res.cloudinary.com/djsshanet/image/upload/v1590729505/kaszbxx2bibrylkkghar.jpg ">
+                </div>
+                <div class="details">
+    <h2>lavender</h2>
+    <p><em>Submitted by siddhant</em>
+    <a href="/art/show/5ed09b25e4754300177168da" class="btn btn-primary">More-Info</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+
+ <div class="col-lg-4 col-md-8 col-sm-7">
+ <div class="box">
+                <div class="card">    
+                <div class="imgBx">
+                <img src= "https://res.cloudinary.com/djsshanet/image/upload/v1590729954/cddn7ibzybu7fetga22u.jpg ">
+                </div>
+                <div class="details">
+    <h2>Don</h2>
+    <p><em>Submitted by 4ni18is069</em>
+    <a href="/art/show/5ed09ce3e4754300177168dd" class="btn btn-primary">More-Info</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <br>
+ 
+</div>
+</div>
+<br>
+<script type="text/javascript" src="../js/art/particles.js-master/particles.js"></script>
+  <script type="text/javascript" src="../js/art/particles.js-master/demo/js/app.js"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<div class="copyr">
+<p>copyright &copy; Rituraj ~ Art Gallery 2020</p>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+/*cooment in css , its different from  html*/
+/*selected tag{
+property : valaue;
+
+}*/
+
+h1{
+  color: blue;
+
+}
+/*color picker of ggogle*/
+
+li{
+  color: rgb(255,97,0);
+}
+
+p{
+  font-size: 50px;
+  color : #010c54;
+}
+
+
+/* 4th value is known as alpha, 0 is fully transprent and 1 shows fully opaque*/
+h4{
+  color: rgba(255, 0, 0, 1);
+}

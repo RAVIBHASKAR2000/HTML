@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Question 1 - Bill</title>
+    </head>
+    <body>
+        <form name="bill" action="bill.php" method="POST" onsubmit="return validate()">
+            UID: <input type="text" id="uid" value="6CSE" /><br />
+            Food Category:
+
+            <input id="veg" type="checkbox" onclick="adjustItems()">
+            <label for="veg">Veg</label>
+
+            <input id="non-veg" type="checkbox" onclick="adjustItems()">
+            <label for="non-veg">Non-Veg</label><br />
+
+            PIN: <input type="text" id="pin" /><br />
+            Age: <input type="number" id="age" /><br />
+            Items:<select id="items">
+            </select><br />
+            Quantity: <input type="number" id="quantity" /><br />
+
+            <p>Total bill: <span id="total">...</span></p>
+
+            <input type="submit" value="Pay" onsubmit="return validate()" />
+        </form>
+        <script>
+            function adjustItems() {
+                var vegElement = document.getElementById("veg");
+                var nonVegElement = document.getElementById("non-veg");
+                var itemsElement = document.getElementById("items");
+
+                var vegItems = '<option value="0">Idli - 50</option><option value="1">Dosa - 100</option>';
+                var nonVegItems = '<option value="2">Biryani - 100</option><option value="3">Kebab - 50</option>';
+
+                itemsElement.innerHTML = '';
+                if (vegElement.checked) {
+                    itemsElement.innerHTML = vegItems;
+                }
+
+                if (nonVegElement.checked) {
+                    itemsElement.innerHTML += nonVegItems;
+                }
+            }
+
+            function validate() {
+                var uidElement = document.getElementById("uid");
+                var pinElement = document.getElementById("pin");
+                var ageElement = document.getElementById("age");
+                var itemsElement = document.getElementById("items");
+                var quantityElement = document.getElementById("quantity");
+                var totalElement = document.getElementById("total");
+
+                var pin = pinElement.value;
+                var age = parseInt(ageElement.value);
+                var item = itemsElement.value;
+                var quantity = parseInt(quantityElement.value);
+
+                if (pin.length != 6) {
+                    alert('The PIN should be exactly 6 digits!');
+                    return false;
+                }
+                else {
+                    var pinValue = parseInt(pin);
+                    if (isNaN(pinValue) || [ 560020, 560021, 560022, 560023, 560024, 560025 ].indexOf(pinValue) < 0) {
+                        alert('Please specify a 6 digit value for the PIN. The value should be one of: 560020, 560021, 560022, 560023, 560024, 560025.');
+                        return false;
+                    }
+                }
+
+                if (isNaN(age) || age < 18) {
+                    alert('The age should be greater than or equal to 18.');
+                    return false;
+                }
+
+                if (isNaN(quantity) || quantity < 1 || quantity > 10) {
+                    alert('The quanity should be min 1 and max 10.');
+                    return false;
+                }
+
+                var prices = [
+                    50,
+                    100,
+                    100,
+                    50
+                ];
+                totalElement.innerHTML = quantity * prices[item];
+
+                return false;
+            }
+        </script>
+    </body>
+</html>

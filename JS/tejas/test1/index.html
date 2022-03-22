@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Test</h2>
+
+<form name="register" method="POST" onsubmit="return validate()">
+  <label for="id">ID:</label><br>
+  <input type="text" id="id" name="id" maxlength="12"  required><br>
+  
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" minlength="3" pattern="[a-zA-Z]+" required><br>
+  
+  <label for="mname">Middle name:</label><br>
+  <input type="text" id="mname" name="mname" minlength="0" pattern="[a-zA-Z]+"><br>
+  
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" minlength="0" pattern="[a-zA-Z]+" required><br><br>
+  
+  <label for="email">Email ID:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  
+  <label for="phone">Phone Number:</label><br>
+  <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br>
+  
+  <label for="cgpa">CGPA:</label><br>
+  <input type="number" min="40" max="100" id="cgpa" name="cgpa" required><br>
+  
+  <label for="pu">12th Marks:</label><br>
+  <input type="number" min="40" max="100" id="pu" name="pu" required><br>
+  
+  <label for="ten">10th Percentage:</label><br>
+  <input type="number" min="40" max="100" id="ten" name="ten" required><br>
+   <h2>Garde:</h2>
+   <div id="content"></div>
+  <input type="submit" value="Submit" onsubmit="return validate()"/>
+   
+</form>
+
+ <div id="Company" style="display: none;"><span>Select Company </span>
+   <select>
+     <option>Infosys</option>
+     <option>TATA</option>
+     <option>Intuit</option>
+     <option>Amazon</option>
+   </select>
+   <span>Select prefered job loctaion</span>
+  Bangalore: <input type="checkbox" name="bangalore">
+  Chennai: <input type="checkbox" name="Chennai">
+  Mysore: <input type="checkbox" name="mysore">
+ </div>
+
+<script>
+function validate() {
+    var uid1 =document.getElementById("id").value;
+  if(!uid1.toLowerCase().startsWith("20171cse"))
+  {
+    alert("Invalid UID");
+    return false;
+  }      
+
+  var cgpa1= parseInt(document.getElementById('cgpa').value);
+  console.log(cgpa1);
+  var pu1 = parseInt(document.getElementById('pu').value);
+  console.log(pu1);
+   var ten1 = parseInt(document.getElementById('ten').value);
+   console.log(ten1);
+
+   var perc=  (pu1+ten1)/2.0;
+    console.log(perc);
+    perc= Math.floor(perc);
+   if(perc>85){
+    var dis=document.getElementById('Company');
+      dis.style.display='block';
+   document.getElementById('content').innerHTML="Distinction";
+    return false;
+    }
+
+    else if(perc>75&&perc<=85){
+      document.getElementById('content').innerHTML="First Class";
+      var dis=document.getElementById('Company');
+      dis.style.display='block';
+      return false;
+    }
+    else if (perc>65 && perc<=75) {
+      document.getElementById('content').innerHTML="Second Class";
+      var dis=document.getElementById('Company');
+      dis.style.display='block';
+      return false;
+    }
+    else{
+      document.getElementById('content').innerHTML="Third Class";
+    }
+
+    
+    
+
+     
+
+   return false;
+
+    // body...
+  }  
+
+
+
+
+</script>
+
+</body>
+</html>

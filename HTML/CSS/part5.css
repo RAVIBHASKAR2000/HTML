@@ -1,0 +1,12 @@
+li{
+  color:red;
+}
+.topitems{
+  color: blue;
+}
+/*topitem class is higher in hirarchy*/
+#two {
+  border: 3px solid black;
+}
+
+/* refer design shack*/

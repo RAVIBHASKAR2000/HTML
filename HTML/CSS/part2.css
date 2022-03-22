@@ -1,0 +1,20 @@
+body{
+  /*background-color: grey;*/
+   background: url(https://www.indianarmy.nic.in/assets/img/slider/01.jpg);
+   
+}
+div{
+  background-color: blue;
+
+}
+
+span{
+  background: red;
+  border-color: yellow;
+  border-width: 1px;
+  border-style: solid;
+}
+p{
+  color: orange;
+
+}

@@ -1,0 +1,53 @@
+body{
+ background-color:;
+}
+.navbarheader{
+     background-color: crimson; 
+}
+.vertical-menu {
+    width: 200px;
+    float: left;
+  }
+
+  .headnav{
+    background-image: linear-gradient(to right bottom,#fc8b83, rgba(245, 55, 42, 0.795));
+    border-radius: 8px;
+  }
+  
+  .vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc;
+  }
+  
+  .vertical-menu a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  
+  .bodyhead button:not(.btn-primary){
+    background-color: #80d4ff;
+  }
+
+  .multi{
+    font-size: 150%;
+    
+  }
+
+
+  .box{
+    margin-top: 2%;
+    border: 1px solid black;
+    padding: 1%;
+    margin-right: 5%;  
+    background-color:#eee;
+    border-radius: 8px;
+
+  }

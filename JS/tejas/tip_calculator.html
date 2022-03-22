@@ -1,0 +1,44 @@
+ <head><script type="text/javascript">
+ function calculateTip()
+ {
+  var tipAmt = document.getElementById("tipamt").value;
+  if((tipAmt=="")||(tipAmt<100))
+      {
+          alert("amount field empty or enter value more than 100");
+          return false;
+	  } 
+  
+    var service = document.getElementsByName('service');
+	var service_value;
+for(var i = 0; i < service.length; i++)
+{
+    if(service[i].checked)
+	{
+        service_value = service[i].value;
+    }
+}
+var total = (tipAmt * service_value) / 20;
+ document.getElementById("tip").innerHTML = total;
+}
+</script></head>
+ <body>
+  <h1>Tip Calculator</h1>
+     <form>
+      <p>How much was your bill?
+        <p>
+           <input id="tipamt" type="text" placeholder="tip Amount" >
+
+          <p>How was your service?
+            <p>
+              <input type="radio"  name="service" value="1"/>OK</br>
+			  <input type="radio"  name="service" value="3"/>GOOD</br>
+				<input type="radio"  name="service" value="4"/>EXCELLENT</br>
+    
+    <button type="button" id="calculate" onclick="calculateTip()">Calculate!</button>
+
+  
+  <!--calculator end-->
+  <div>
+    <span id="tip"></span>
+     </div>
+</body>

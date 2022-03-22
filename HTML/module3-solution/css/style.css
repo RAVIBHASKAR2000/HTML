@@ -1,0 +1,44 @@
+body{
+	font-size: 1em;
+	background:url('../images/cook-2364221_1920.jpg');
+}
+
+h1{
+	color: red;
+	text-align: center;
+}
+.brand-name span{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#main-content div{
+	border: 2px solid black;
+	margin: 25px;
+	
+	padding-right: 35px;
+	padding-left: 35px;
+}
+ #main-content h2{
+ 	text-align: center;
+ 	color: #f8fc03;
+
+ }
+#main-content p{
+	color: #faf5f5;
+	font-size: 1.2em;
+}
+
+
+.nav-item{
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.nav-item:hover{
+	background-color: #66a3ff;
+}
+
+#button-one:hover{
+	background-color: #66a3ff;
+}

@@ -1,0 +1,38 @@
+/*class always start with dot*/
+
+.first{
+  color: blue;
+
+}
+
+.second{
+  color: red;
+}
+
+#singleout{
+  color: green;
+  text-decoration:underline;
+}
+
+/*   ' *' slector for selecting every element of the page*/
+/*
+*{
+  color: black;
+}
+ */
+
+
+ /*a jason siblings selector*/
+h3 + ul {
+  border: 4px solid purple;
+}
+
+li a{
+  color: red;
+
+}
+
+li a[href="file:///C:/Users/Ravi%20Bhaskar/Desktop/HTML/CSS/background.htm"]{
+  color: blue;
+  border:2px solid orange;
+}

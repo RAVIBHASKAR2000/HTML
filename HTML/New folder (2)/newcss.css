@@ -1,0 +1,17 @@
+body{
+background-color: yellow;
+font-size : 100%;
+
+}
+
+h2{
+color : pink;
+font-size : 200%;
+
+}
+
+p{
+border: 1px solid red;
+padding : 30px;
+
+}

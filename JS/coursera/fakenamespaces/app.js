@@ -1,0 +1,2 @@
+ravigreeter.sayhello();
+johngreeter.sayhi(); 

@@ -1,0 +1,70 @@
+/* Created by C-Walk Sanju */
+
+*,*:before,*:after{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+
+}
+
+body {
+    
+    background:black;
+}
+
+   .battery{
+
+   width:40%;
+   height:230px;
+   transform:translate(110px, 100px);
+   posution:relative;
+   border-radius:4px;
+   padding:0px;
+   background:white;
+}
+
+.battery:after{
+
+content:"";
+display:block;
+width:45%;
+height:25px;
+background:white;
+position:absolute;
+top:-25px;
+left:28%;
+border-radius:6px 6px 0px 0px;
+
+}
+
+.battery #batteryLevel {
+
+width:100%;
+height:0%;
+background:blue;
+border-radius:0px 0px 4px 4px;
+position:absolute;
+bottom:0px;
+transition:all 2s;
+overflow:hidden;
+
+}
+
+.battery  #percentageLevel{
+
+display:block;
+width:70px;
+height:70px;
+background:black;
+position:absolute;
+top:70px;
+left:38px;
+border-radius:50%;
+color:white;
+text-align:center;
+padding:18px;
+font-size:26px;
+}
+
